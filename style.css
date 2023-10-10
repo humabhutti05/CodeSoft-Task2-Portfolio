@@ -1,0 +1,250 @@
+body{
+    background-color: black;
+}
+.navbar-brand{
+    color: #9F4BB1;
+    font-family: 'Lobster', cursive; 
+    font-size: 40px;
+}
+.nav-link{
+    font-family: 'Abhaya Libre', serif;
+    color: #9F4BB1; 
+    text-align: center;
+    font-size: 20px;
+}
+.nav-link:hover{
+    color: #ca9dd4;
+}
+/* .resume {
+    background-color: transparent; 
+    color: #fff; 
+    padding: 10px 25px; 
+    border-radius: 5px; 
+    border: 3px solid #6A0F83;
+    font-weight: bold; 
+    width: 30%;
+    display: inline-block; 
+    text-align: center;
+  }
+  
+  .resume:hover {
+    background-color: transparent; 
+    color: #9F4BB1; 
+    box-shadow: 2px 3px 5px 1px rgb(136, 133, 133);
+  } */
+  .button {
+    width: 30%;
+    display: flex;
+    padding: 1.5em 2rem;
+    cursor: pointer;
+    gap: 0.4rem;
+    font-size: 20px;
+    border-radius: 40px;
+    text-shadow: 2px 2px 2px rgba(140, 167, 172, 0.945);
+    background: linear-gradient(15deg, #830f83, #aa2068, #cc3f47, #b16745, #dd9d48, #b1633f, #a33d42, #aa2068, #880088) no-repeat;
+    background-size: 300%;
+    color: #dfd5d5;
+    border: none;
+    background-position: left center;
+    box-shadow: 0 30px 10px -20px rgba(0,0,0,.2);
+    transition: background .3s ease;
+  }
+  
+  .button:hover {
+    background-size: 320%;
+    background-position: right center;
+  }
+  
+  .button:hover svg {
+    fill: #fff;
+  }
+  
+  .button svg {
+    width: 23px;
+    fill: #f09f33;
+    transition: .3s ease;
+  }
+  .icons{
+    color: white;
+    justify-content: flex-end;
+  }
+  .icons:hover{
+    color: rgb(102, 100, 100);
+    
+  }
+  .project-section {
+    padding: 60px 0;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+}
+
+.project-card p {
+    font-size: 16px;
+}
+
+.project-card a {
+    text-decoration: none;
+}
+.skills-section {
+  padding: 60px 0;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  font-size: 16px;
+}
+.contact-section {
+  padding: 60px 0;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+address {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
